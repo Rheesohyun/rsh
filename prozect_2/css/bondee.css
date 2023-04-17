@@ -1,0 +1,318 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: "Kanit", nanum, sans-serif;
+}
+@font-face {
+  font-family: nanum;
+  src: url(../font/NanumGothic.woff) format("woff");
+}
+@font-face {
+  font-family: fontassom;
+  src: url(../font/fa-solid-900.woff2);
+}
+@font-face {
+  font-family: sangju;
+  src: url(../font/SANGJU\ Gyeongcheon\ Island.ttf);
+}
+@font-face {
+  font-family: taebaek;
+  src: url(../font/TAEBAEK\ milkyway.ttf);
+}
+/*헤더시작*/
+header {
+  width: 100%;
+  height: 1000px;
+  margin: 0 auto;
+  background: url(../images/main.png) center/cover;
+}
+header .menu {
+  width: 1280px;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu .logo {
+  display: flex;
+  width: 300px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .menu .gnb {
+  flex-grow: 1;
+}
+header .menu .gnb ul {
+  display: flex;
+}
+header .menu .gnb ul li a {
+  padding-right: 100px;
+  font-weight: bold;
+}
+header .menu .sub {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  z-index: 3;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+header .menu .sub li a {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  color: #000;
+}
+header .menu > .gnb ul:hover .sub {
+  height: 200px;
+}
+/*SNS시작*/
+header .menu .sns {
+  width: 200px;
+}
+header .menu .sns ul {
+  display: flex;
+}
+header .menu .sns ul li a {
+  padding-right: 30px;
+  font-size: 25px;
+}
+header .menu .sns ul li a:hover {
+  color: #ccc;
+}
+header .main {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  margin: 0 auto;
+  height: 1000px;
+}
+header .main .text1 {
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  font-size: 26px;
+}
+header .main .text2 {
+  position: absolute;
+  right: 140px;
+  top: 200px;
+  z-index: 2;
+  text-align: center;
+  font-family: nanum;
+  line-height: 24px;
+  font-size: 18px;
+}
+header .main .text2 p::after {
+  position: absolute;
+  top: -145px;
+  right: -100px;
+  z-index: -3;
+  content: "";
+  background: #fff;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transform: scale(0);
+}
+header .main .text2:hover p::after {
+  animation: ani04 0.5s ease-in-out alternate forwards;
+}
+@keyframes ani04 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+header .main .ani01 {
+  position: absolute;
+  top: 280px;
+  right: 460px;
+  animation: ani 0.8s alternate ease-in infinite;
+}
+header .main .ani02 {
+  position: absolute;
+  top: 450px;
+  left: 100px;
+  animation: ani 1s alternate ease-in infinite;
+}
+@keyframes ani {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(25px);
+  }
+}
+header .main .ani03 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: ani2 1.5s alternate ease-in-out infinite;
+}
+@keyframes ani2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+/*헤더, 메인 스타일 끝*/
+.WaA {
+  width: 1280px;
+  margin: 0 auto;
+  height: 650px;
+}
+.WaA h1 {
+  text-align: center;
+  margin-top: 250px;
+  font-size: 48px;
+}
+.WaA p {
+  text-align: center;
+  margin: 20px auto;
+}
+.WaA .btn {
+  margin: 110px auto;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  background: #000;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 48px;
+  width: 23%;
+  box-shadow: 5px 5px 2px #aaa;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.7s;
+}
+.WaA .btn:hover {
+  transform: scale(1.12);
+}
+/*whta about app : 2페이지 끝*/
+section {
+  width: 1456px;
+  height: 1170px;
+  background: url(../images/meun_back.png) center/cover;
+  margin: 0 auto;
+}
+section h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 48px;
+}
+section p {
+  text-align: center;
+  padding: 10px 0;
+}
+section ul {
+  margin: 35px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+}
+section ul li {
+  position: relative;
+  cursor: pointer;
+}
+section .top_btn > li::after {
+  font-family: sangju;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  width: 92%;
+  height: 0%;
+  line-height: 334px;
+  position: absolute;
+  bottom: 23px;
+  left: 10px;
+  transition: height 0.5s;
+  overflow: hidden;
+  font-size: 24px;
+}
+section .top_btn > li:hover::after {
+  height: 91%;
+}
+section .top_btn > li:first-child:after {
+  content: "캐릭터 커스터마이징";
+}
+section .top_btn > li:nth-child(2):after {
+  content: "나만의 방, 마이 룸";
+}
+section .top_btn > li:nth-child(3):after {
+  content: "만남의 장, 스퀘어";
+}
+section .bottom_btn > li::after {
+  font-family: sangju;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  width: 92%;
+  height: 0%;
+  line-height: 334px;
+  position: absolute;
+  bottom: 23px;
+  left: 10px;
+  transition: height 0.5s;
+  overflow: hidden;
+  font-size: 24px;
+}
+section .bottom_btn > li:hover::after {
+  height: 91%;
+}
+section .bottom_btn > li:first-of-type:after {
+  content: "다양한 감정표현, 메세지";
+}
+section .bottom_btn > li:nth-of-type(2):after {
+  content: "친구랑 함께, 플로팅";
+}
+section .btn {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  line-height: 50px;
+  font-size: 24px;
+  background: #000;
+  text-align: center;
+  margin: 0 auto;
+}
+section .btn a {
+  color: #fff;
+}
+section .btn:hover,
+section .btn:hover a {
+  background: #fff;
+  color: #000;
+}
+/*3페이지 끝*/
+.pege4 {
+  width: 1440px;
+  margin: 210px auto;
+}
+.pege4 .logo {
+  float: left;
+}
